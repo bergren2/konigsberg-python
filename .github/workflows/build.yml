@@ -21,9 +21,9 @@ jobs:
       run: pipenv run test_coverage
     - name: Generate coverage report and publish
       uses: paambaati/codeclimate-action@v5.0.0
+      with:
+        coverageCommand: pipenv run coverage xml
       env:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         coverageLocations: |
-          ${{github.workspace}}/coverage.lcov:lcov
-      with:
-        coverageCommand: pipenv run coverage lcov
+          ${{github.workspace}}/coverage.xml:xml
