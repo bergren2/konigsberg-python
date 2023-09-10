@@ -19,3 +19,7 @@ reading from below:
 ```shell
 python -m pytest tests
 ```
+
+## Further Reading
+
+- https://www.jetbrains.com/help/pycharm/pipenv.html
