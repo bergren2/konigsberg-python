@@ -11,6 +11,9 @@ reading from below:
 1. `scoop install python` or `brew install python`
 2. `pip install --user pipenv`
 
+> [!NOTE]
+> Depending on how you installed Python, you might need to specify Python 3 using `python3` and `pip3`.
+
 ## Tests
 
 ```shell
