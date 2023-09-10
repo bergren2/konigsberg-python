@@ -11,20 +11,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
-    - name: pipenv install
-      uses: VaultVulp/action-pipenv@v2.0.1
+    - uses: actions/setup-python@v4
       with:
-        command: install --dev
-
+        cache: pipenv
+    - name: Install pipenv
+      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+    - run: pipenv install --dev
     - name: Run tests w/ coverage
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: run test_coverage
-
-    - name: Generate code coverage report and publish
+      run: pipenv run test_coverage
+    - name: Generate coverage report and publish
       uses: paambaati/codeclimate-action@v5.0.0
       env:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-      with:
-        coverageCommand: coverage lcov
+        coverageLocations: |
+          ${{github.workspace}}/coverage.lcov:lcov
+        coverage: pipenv run coverage lcov
