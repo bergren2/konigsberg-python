@@ -1,3 +1,7 @@
+![Build Status](https://github.com/bergren2/konigsberg-python/workflows/build/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/maintainability)](https://codeclimate.com/github/bergren2/konigsberg-python/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/test_coverage)](https://codeclimate.com/github/bergren2/konigsberg-python/test_coverage)
+
 # [Königsberg](https://github.com/bergren2/konigsberg) - Python
 
 For a starting project guideline, I'm going to use [City Scrapers](https://github.com/City-Bureau/city-scrapers)
@@ -8,16 +12,17 @@ reading from below:
 
 ## Setup
 
-1. `scoop install python` or `brew install python`
-2. `pip install --user pipenv`
+`scoop install python` or `brew install python`
 
-> [!NOTE]
-> Depending on how you installed Python, you might need to specify Python 3 using `python3` and `pip3`.
+```shell
+pip install --user pipenv
+pipenv install
+```
 
 ## Tests
 
 ```shell
-python -m pytest tests
+pipenv run tests
 ```
 
 ## Further Reading
