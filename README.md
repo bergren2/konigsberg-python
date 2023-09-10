@@ -1,3 +1,7 @@
+![Build Status](https://github.com/bergren2/konigsberg-python/workflows/build/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/maintainability)](https://codeclimate.com/github/bergren2/konigsberg-python/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/test_coverage)](https://codeclimate.com/github/bergren2/konigsberg-python/test_coverage)
+
 # [Königsberg](https://github.com/bergren2/konigsberg) - Python
 
 For a starting project guideline, I'm going to use [City Scrapers](https://github.com/City-Bureau/city-scrapers)
