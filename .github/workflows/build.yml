@@ -25,4 +25,5 @@ jobs:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
         coverageLocations: |
           ${{github.workspace}}/coverage.lcov:lcov
-        coverage: pipenv run coverage lcov
+      with:
+        coverageCommand: pipenv run coverage lcov
