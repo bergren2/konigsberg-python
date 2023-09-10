@@ -1,7 +1,4 @@
 class Problem1:
-    def __init__(self):
-        pass
-
     @staticmethod
     def solve(limit):
         num_sum = 0
