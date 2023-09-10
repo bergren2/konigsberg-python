@@ -15,7 +15,7 @@ jobs:
     - name: pipenv install
       uses: VaultVulp/action-pipenv@v2.0.1
       with:
-        command: install
+        command: install --dev
 
     - name: Run tests w/ coverage
       uses: VaultVulp/action-pipenv@v2.0.1
