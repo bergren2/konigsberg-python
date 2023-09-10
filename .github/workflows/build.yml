@@ -17,7 +17,19 @@ jobs:
       with:
         command: install
 
-    - name: Run tests
+    - name: Run tests w/ coverage
       uses: VaultVulp/action-pipenv@v2.0.1
       with:
-        command: run tests
+        command: run test_coverage
+
+    - name: Generate coverage report
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: run coverage lcov
+
+    - name: Publish code coverage
+      uses: paambaati/codeclimate-action@v5.0.0
+      env:
+        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+        coverageLocations: |
+          ${{github.workspace}}/coverage.lcov:lcov
