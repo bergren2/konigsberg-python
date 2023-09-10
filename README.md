@@ -8,16 +8,17 @@ reading from below:
 
 ## Setup
 
-1. `scoop install python` or `brew install python`
-2. `pip install --user pipenv`
+`scoop install python` or `brew install python`
 
-> [!NOTE]
-> Depending on how you installed Python, you might need to specify Python 3 using `python3` and `pip3`.
+```shell
+pip install --user pipenv
+pipenv install
+```
 
 ## Tests
 
 ```shell
-python -m pytest tests
+pipenv run tests
 ```
 
 ## Further Reading
