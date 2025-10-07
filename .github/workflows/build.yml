@@ -17,13 +17,5 @@ jobs:
         python-version-file: .python-version
     - name: Install the project
       run: uv sync --locked --all-extras --dev
-    - name: Run tests w/ coverage
-      run: uv run coverage run -m pytest
-    - name: Generate coverage report and publish
-      uses: paambaati/codeclimate-action@v5.0.0
-      with:
-        coverageCommand: uv run coverage xml
-      env:
-        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-        coverageLocations: |
-          ${{github.workspace}}/coverage.xml:xml
+    - name: Run tests
+      run: uv run pytest
