@@ -10,21 +10,22 @@ reading from below:
 - [Structuring Your Project](https://docs.python-guide.org/writing/structure/)
     - [Repository Structure and Python](https://kennethreitz.org/essays/2013/01/27/repository-structure-and-python)
 
+## Prereqs
+- [uv](https://docs.astral.sh/uv/#installation)
+
 ## Setup
 
-`scoop install python` or `brew install python`
-
 ```shell
-pip install --user pipenv
-pipenv install
+uv python install
+uv sync
 ```
 
 ## Tests
 
 ```shell
-pipenv run tests
+uv run pytest
 ```
 
 ## Further Reading
 
-- https://www.jetbrains.com/help/pycharm/pipenv.html
+- https://www.jetbrains.com/help/pycharm/uv.html
