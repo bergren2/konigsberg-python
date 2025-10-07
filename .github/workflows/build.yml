@@ -10,20 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v5
+    - uses: astral-sh/setup-uv@v6
     - uses: actions/setup-python@v4
       with:
-        cache: pipenv
-    - name: Install pipenv
-      run: curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-    - run: pipenv install --dev
-    - name: Run tests w/ coverage
-      run: pipenv run test_coverage
-    - name: Generate coverage report and publish
-      uses: paambaati/codeclimate-action@v5.0.0
-      with:
-        coverageCommand: pipenv run coverage xml
-      env:
-        CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-        coverageLocations: |
-          ${{github.workspace}}/coverage.xml:xml
+        python-version-file: .python-version
+    - name: Install the project
+      run: uv sync --locked --all-extras --dev
+    - name: Run tests
+      run: uv run pytest

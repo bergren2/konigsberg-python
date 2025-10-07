@@ -1,0 +1,21 @@
+[project]
+name = "konigsberg-python"
+version = "0.1.0"
+description = "Königsberg solutions in Python"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "coverage>=7.10.7",
+    "pytest>=8.4.2",
+]
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]

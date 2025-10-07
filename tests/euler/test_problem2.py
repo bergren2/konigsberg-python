@@ -1,4 +1,4 @@
-from konigsberg.euler.problem2 import Problem2
+from euler.problem2 import Problem2
 
 
 def test_sample():

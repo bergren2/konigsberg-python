@@ -1,6 +1,5 @@
 ![Build Status](https://github.com/bergren2/konigsberg-python/workflows/build/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/maintainability)](https://codeclimate.com/github/bergren2/konigsberg-python/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/776d6d4cc92c0915434c/test_coverage)](https://codeclimate.com/github/bergren2/konigsberg-python/test_coverage)
 
 # [Königsberg](https://github.com/bergren2/konigsberg) - Python
 
@@ -10,21 +9,22 @@ reading from below:
 - [Structuring Your Project](https://docs.python-guide.org/writing/structure/)
     - [Repository Structure and Python](https://kennethreitz.org/essays/2013/01/27/repository-structure-and-python)
 
+## Prereqs
+- [uv](https://docs.astral.sh/uv/#installation)
+
 ## Setup
 
-`scoop install python` or `brew install python`
-
 ```shell
-pip install --user pipenv
-pipenv install
+uv python install
+uv sync
 ```
 
 ## Tests
 
 ```shell
-pipenv run tests
+uv run pytest
 ```
 
 ## Further Reading
 
-- https://www.jetbrains.com/help/pycharm/pipenv.html
+- https://www.jetbrains.com/help/pycharm/uv.html
