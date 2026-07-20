@@ -3,7 +3,7 @@ class Problem1:
         pass
 
     @staticmethod
-    def solve(limit: int):
+    def solve(limit: int) -> int:
         num_sum = 0
         for i in range(1, limit):
             if i % 3 == 0 or i % 5 == 0:
