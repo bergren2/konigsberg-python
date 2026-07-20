@@ -1,19 +1,15 @@
+from common.fibseq import FibSeq
+
 class Problem2:
-    term0 = 0
-    term1 = 1
+    def __init__(self):
+        self.term0 = 0
+        self.term1 = 1
+
+
+    def solve(self, limit: int):
+        fib = FibSeq(self.term0, self.term1)
+        return fib.sum_of_terms(limit, Problem2.is_even)
 
     @staticmethod
-    def solve(limit):
-        num_sum = 0
-        a = Problem2.term0
-        b = Problem2.term1
-
-        while a + b < limit:
-            c = a + b
-            a = b
-            b = c
-
-            if c % 2 == 0:
-                num_sum += c
-
-        return num_sum
+    def is_even(num: int):
+        return num % 2 == 0
