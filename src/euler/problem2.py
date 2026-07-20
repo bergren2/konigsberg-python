@@ -1,10 +1,10 @@
 from common.fibseq import FibSeq
 
+
 class Problem2:
     def __init__(self):
         self.term0 = 0
         self.term1 = 1
-
 
     def solve(self, limit: int) -> int:
         fib = FibSeq(self.term0, self.term1)
