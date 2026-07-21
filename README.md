@@ -7,12 +7,19 @@ Started using Python at work and chose to align this with the stack used there, 
 
 ## Prereqs
 - [uv](https://docs.astral.sh/uv/#installation)
+- [ruff](https://docs.astral.sh/ruff/installation/)
 
 ## Setup
 
 ```shell
 uv python install
 uv sync
+```
+
+## Linting
+
+```shell
+ruff check
 ```
 
 ## Tests
