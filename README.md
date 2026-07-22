@@ -7,6 +7,8 @@ Started using Python at work and chose to align this with the stack used there, 
 
 ## Prereqs
 - [uv](https://docs.astral.sh/uv/#installation)
+- [basedpyright](https://docs.basedpyright.com/latest/installation/command-line-and-language-server/)
+- [black](https://black.readthedocs.io/en/stable/getting_started.html)
 - [ruff](https://docs.astral.sh/ruff/installation/)
 
 ## Setup
