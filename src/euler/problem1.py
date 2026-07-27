@@ -1,6 +1,9 @@
 class Problem1:
+    def __init__(self):
+        pass
+
     @staticmethod
-    def solve(limit):
+    def solve(limit: int) -> int:
         num_sum = 0
         for i in range(1, limit):
             if i % 3 == 0 or i % 5 == 0:

@@ -3,20 +3,25 @@
 
 # [Königsberg](https://github.com/bergren2/konigsberg) - Python
 
-For a starting project guideline, I'm going to use [City Scrapers](https://github.com/City-Bureau/city-scrapers)
-because it's the one Python project I've collaborated on and I know they do good work. I'm also going to supplement with
-reading from below:
-- [Structuring Your Project](https://docs.python-guide.org/writing/structure/)
-    - [Repository Structure and Python](https://kennethreitz.org/essays/2013/01/27/repository-structure-and-python)
+Started using Python at work and chose to align this with the stack used there, which is mainly `uv`.
 
 ## Prereqs
 - [uv](https://docs.astral.sh/uv/#installation)
+- [basedpyright](https://docs.basedpyright.com/latest/installation/command-line-and-language-server/)
+- [black](https://black.readthedocs.io/en/stable/getting_started.html)
+- [ruff](https://docs.astral.sh/ruff/installation/)
 
 ## Setup
 
 ```shell
 uv python install
 uv sync
+```
+
+## Linting
+
+```shell
+ruff check
 ```
 
 ## Tests

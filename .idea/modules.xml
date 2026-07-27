@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/konigsberg-python.iml" filepath="$PROJECT_DIR$/.idea/konigsberg-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/konigsberg-python@1.iml" filepath="$PROJECT_DIR$/.idea/konigsberg-python@1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/konigsberg-python@2.iml" filepath="$PROJECT_DIR$/.idea/konigsberg-python@2.iml" />
     </modules>
   </component>
 </project>
