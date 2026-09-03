@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+
 from common.string import String
 
 

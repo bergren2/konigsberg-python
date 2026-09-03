@@ -1,5 +1,6 @@
 from euler.problem28 import Problem28
 
+
 def test_sample():
     assert Problem28(5).solve() == 101
 
